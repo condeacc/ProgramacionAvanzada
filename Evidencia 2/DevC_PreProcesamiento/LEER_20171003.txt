@@ -1,0 +1,133 @@
+url de obtencion de este documento:
+
+https://sourceforge.net/p/dev-cpp/discussion/48211/thread/88398262/
+
+Fecha de consulta de esa pagina:2017.10.03
+
+
+
+Butch Bradley
+Butch Bradley - 2006-09-19
+
+Hi Everyone:
+
+I just bought another a memory stick and I went ahead and installed Dev-Cpp on it. From time to time, someone has asked on this forum how to do this, so I thought that I would outline what I did for anyone interested.
+
+On the couple of computers that I have used a memory stick on, they appear as drive E:\ so that is what I'm going to assume here.
+
+There is just one little detail that makes using Dev-Cpp on a memory stick different then if you were to install it directly on a computer. That has to do with the Dev-Cpp configuration files. As you know, you can configure various options from within Dev-Cpp, such as Compiler Options, Environment Options, and Editor options. If you want to be able to use your configuration, irregardless of the host computer you are using, then you will have a little extra work to do after you've installed Dev-Cpp on the memory stick.
+Installation:
+
+Buy a memory stick large enough to hold Dev-Cpp. The only thing currently on my memory stick is Dev-Cpp and it shows 'Used space' of 69.2 MB. So you have to buy at least a 128 MB.
+
+I copied devcpp-4.9.9.2 setup.exe to the memory stick. (You probably don't have to do this, putting it on C:\ should work too.)
+
+When you get to this part, change the default destination from C:\Dev-Cpp to your memory stick by selecting 'Browse'. Next, I changed it to E:\ and then clicked the button 'Make New Folder' and call that folder 'Dev-Cpp' then clicked OK. So my path became E:\Dev-Cpp.
+
+Click the 'Install' button, when installation is complete click the button 'Finish'.
+Configuration:
+
+If this is a "clean" install, then during the installation a window will appear that says
+"Your config files will be stored in..." If you want to be able to configure Dev-Cpp and use those setting on any computer then write this location down. This location will be on the C:\ drive. The two configuration files are called 'devcpp.ini' and 'devcpp.cfg'.
+
+Alternatively, if you already have Dev-Cpp installed on a computer you can use those configuration files with the memory stick. In this case you will have to find the two files 'devcpp.ini' and 'devcpp.cfg'. The exact location of these files varies depending on the version of Windows, there are detailed instructions on finding them in the section on how to uninstalling Dev-Cpp cleanly in the FAQ "PLEASE READ BEFORE POSTING A QUESTION" (of course, you aren't going to uninstall Dev-Cpp, only find these two files).
+
+Once you have found the config files put a copy of them in E:\Dev-Cpp.
+Using Configs:
+
+When you plug your memory stick into a host computer and startup Dev-Cpp by double clicking on the Dev-Cpp icon it will look on the C:\ drive of the host, not on the memory stick, for the two configuration files devcpp.cfg and devcpp.ini, if it can't find them then it will create a new set of config files on C:\ which will contain the Dev-Cpp default settings.
+
+To use the config files located on the memory stick, you have to tell Dev-Cpp to use them. There are two ways that you can do this.
+
+1) Command Prompt:
+At the command prompt enter the following:
+E:\dev-cpp\devcpp -c E:\dev-cpp\
+
+Dev-Cpp will startup using your configuration files from the memory stick.
+
+2) Double click Dev-Cpp Icon:
+If you don't want to use the command prompt, you can start up Dev-Cpp by double clicking on the Dev-Cpp icon, but you will have to do the following once on each host computer:
+
+Double click on the Dev-Cpp Icon to start it up. Dev-Cpp will create a default configuration file on the host computer. Select Tools > Environment Options and click the tab Files & Dir... Next, check the box in 'Alternate Configuration File' and in the space provided enter: E:\Dev-cpp\devcpp.ini
+and click OK, then restart Dev-Cpp, it will load your config file off the memory stick.
+
+If you startup Dev-Cpp from a memory stick on a computer that no longer has Dev-Cpp installed, but the two config files are still there, you will get a message window that starts off saying:
+"Following Bin directories don't exist"
+"C:\Dev-Cpp\Bin"
+"Following C Include directories don't exist" ... a bunch more stuff, then it asks
+"Would you like Dev-C++ to remove them for you...."
+Click the Yes button, and you should be good to go.
+
+One note about using Dev-Cpp on a memory stick, because accessing the stick takes longer then accessing a hard drive, it will take a little longer for Dev-Cpp to do stuff, so don't complain if it seems slower then normal.
+
+As I said at the start of this, whenever I've plugged a memory stick into a computer it has shown up as E:. So what I don't know is how Dev-Cpp will react if it shows up as some other letter. I think it will act as I outlined above with the "Following Bin directories don't exist", etc. In which case you would click Yes.
+
+I think thats everything, hope that this is useful to some one.
+
+See Ya
+Butch
+ 
+
+    Jaime
+    Jaime - 2008-03-26
+
+    I second the Dev-C++ Portable link. I've been using Dev-C++ Portable (I got it from PortableApps.com) and works perfectly fine. All I had to do was run the installer (and make sure it was installing to my flash drive) and after that, everything worked without a hinch.
+
+    Nice guide, though. ^_^
+    -JaDe
+     
+
+    Anonymous - 2006-09-20
+
+    Neat, I might try that. What about mirrors.cfg used by WebUpdate - can that be supported?
+
+    Clifford
+     
+
+        Butch Bradley
+        Butch Bradley - 2006-09-20
+
+        Clifford:
+
+        I don't know, have not tried it, I didn't even think of coping it over when I copied the configs. I'll give it a try and let you know.
+
+        See Ya
+        Butch
+         
+
+        Butch Bradley
+        Butch Bradley - 2006-09-20
+
+        The mirrors.cfg only works if it is on C:. If it is on the memory stick Dev shows the old mirrors (defaults).
+
+        See Ya
+        Butch
+         
+
+    Wayne Keen
+    Wayne Keen - 2006-09-20
+
+    Put a pointer in the "Please Read" thread to this thread. Thanks!
+
+    Wayne
+     
+
+    Nobody/Anonymous
+    Nobody/Anonymous - 2008-01-29
+
+    I just wanted to throw in on this old post, that you can create a .bat file to run the path "E:\dev-cpp\devcpp -c E:\dev-cpp\&quot; automatically and treated as an executible.
+     
+
+        cpns
+        cpns - 2008-01-29
+
+        You could create a short-cut to do the same somewhat more elgantly. This thread was really old, I am not sure if anyone is really interested.
+         
+
+    Nobody/Anonymous
+    Nobody/Anonymous - 2008-01-29
+
+    http://sourceforge.net/projects/devcpp-portable/
+
+    might be a better solution!
+
