@@ -1,0 +1,27 @@
+El programa consta de una GUI, que con el uso de la libreria "jssc.jar" 
+se logra establecer una comunicación serial a través del puerto RS232 
+hacia los pines TX y RX del arduino.
+
+El programa manda una "a" desde la computadora, cuando el arduino lo 
+recibe, regresa una mensaje hacía la computadora "Hola usuario".
+
+////// PROGRAMA EN ARDUINO (necesario para respuesta en GUI) ///////
+
+int caracter;
+int i=0;
+void setup() {
+Serial.begin(9600);
+}
+
+void loop() {
+
+	if(Serial.available() > 0)
+	 {
+	    caracter = Serial.read();
+	    if(caracter == 97);
+		{
+		  Serial.println("Hola usuario");
+		}
+	 }
+
+}	
