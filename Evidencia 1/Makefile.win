@@ -1,0 +1,43 @@
+# Project: Operaciones_Polinomios
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.o
+LINKOBJ  = ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.o
+LIBS     = -static-libgcc
+INCS     = 
+CXXINCS  = 
+BIN      = Operaciones_Polinomios.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Directory_entry.o $(CXXFLAGS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Pol_Directory.o $(CXXFLAGS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Polinomio.o $(CXXFLAGS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/Rac.o $(CXXFLAGS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/String_Tokenizer.o $(CXXFLAGS)
+
+../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.o: ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.cpp
+	$(CPP) -c ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.cpp -o ../ProgramacionAvanzada2018-nestor/evidencia1/calculadora_de_polinomios_version1/TestShell.o $(CXXFLAGS)
